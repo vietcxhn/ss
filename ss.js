@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let intervalTime = 0
 	let score = 0
 
-	document.addEventListener('keyup', control)
-	startButton.addEventListener('click', start)
+	
 
 	function start() {
 		snake.forEach(index => box(index).classList.remove('snake'))
@@ -70,4 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	      	direction = +width //if we press down, the snake head will instantly appear in the div ten divs from where you are now
 	    }
   	}
+	
+	document.addEventListener('keyup', control)
+	startButton.addEventListener('click', start)
 }) 
