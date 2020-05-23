@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		clearInterval(interval)
 		randomApple()
 		direction = 1
-		intervalTime = 1000
+		intervalTime = 300
 		snake = [2,1,0]
-		snake.forEach(index => squares[index].classList.add('snake'))
+		snake.forEach(index => box[index].classList.add('snake'))
 		interval = setInterval(move, intervalTime)
 	}
 
