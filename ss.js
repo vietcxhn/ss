@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let intervalTime = 0
 	let score = 0
 
-	document.addEventListener('keydown', control)
+	document.addEventListener('keyup', control)
 	startButton.addEventListener('click', start)
 
 	function start() {
