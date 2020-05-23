@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	let intervalTime = 0
 	let score = 0
 
-	document.addEventListener('keyup', control)
+	document.addEventListener('keydown', control)
 	startButton.addEventListener('click', start)
 
 	function start() {
-		snake.forEach(index => box(index).classList.remove('snake'))
+		snake.forEach(index => box[index].classList.remove('snake'))
 		box(appleIndex).classList.remove('apple')
 		clearInterval(interval)
 		randomApple()
@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		do{
 			appleIndex = Math.floor(Math.random() * box.length)
 		}
-		while(box(appleIndex).classList.contains('snake'))
-		box(appleIndex).classList.add('apple')
+		while(box[appleIndex].classList.contains('snake'))
+		box[appleIndex].classList.add('apple')
 	}
 
 	function move() {
@@ -70,5 +70,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	      	direction = +width //if we press down, the snake head will instantly appear in the div ten divs from where you are now
 	    }
   	}
-	
 }) 
