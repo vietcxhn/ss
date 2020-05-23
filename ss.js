@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	let interval = 0
 	let intervalTime = 0
 	let score = 0
-
+	
+	document.addEventListener('keydown', control)
+	startButton.addEventListener('click', start)
+	
+	
 	function start() {
 		snake.forEach(index => box(index).classList.remove('snake'))
 		box(appleIndex).classList.remove('apple')
@@ -67,4 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
       	direction = +width //if we press down, the snake head will instantly appear in the div ten divs from where you are now
     }
   }
+	
 }) 
