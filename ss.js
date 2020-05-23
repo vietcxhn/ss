@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	let intervalTime = 0
 	let score = 0
 
-	
+	document.addEventListener('keyup', control)
+	startButton.addEventListener('click', start)
 
 	function start() {
 		snake.forEach(index => box(index).classList.remove('snake'))
@@ -70,6 +71,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	    }
   	}
 	
-	document.addEventListener('keyup', control)
-	startButton.addEventListener('click', start)
 }) 
