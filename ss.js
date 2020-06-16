@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let interval = 0
 	let intervalTime = 0
 	let score = 0
+	box.forEach(square => square.classList.add('col-xs-4')))
 
 	document.addEventListener('keydown', control)
 	startButton.addEventListener('click', start)
