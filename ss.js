@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let snake = [2,1,0]
 	let appleIndex = 0
 	let direction = 1
-  let crl = direction
+  	let crl = direction
 	let interval = 0
 	let intervalTime = 0
 	let score = 0
@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function start() {
 		snake.forEach(index => box[index].classList.remove('snake'))
-    score = 0
-    scoreDisplay.innerText = score
+    		score = 0
+    		scoreDisplay.innerText = score
 		box[appleIndex].classList.remove('apple')
 		clearInterval(interval)
 		direction = 1
-    crl = 1
+   		crl = 1
 		intervalTime = 150
 		snake = [2,1,0]
 		snake.forEach(index => box[index].classList.add('snake'))
@@ -39,16 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	function move() {
-    direction = crl
+    		direction = crl
 		if (
-      (snake[0] + width >= (width * width) && direction === width ) || //if snake hits bottom
-      (snake[0] % width === width -1 && direction === 1) || //if snake hits right wall
-      (snake[0] % width === 0 && direction === -1) || //if snake hits left wall
-      (snake[0] - width < 0 && direction === -width) ||  //if snake hits the top
-      box[snake[0] + direction].classList.contains('snake') //if snake goes into itself
-    ) {
-      return clearInterval(interval) //this will clear the interval if any of the above happen
-    }
+      			(snake[0] + width >= (width * width) && direction === width ) || //if snake hits bottom
+      			(snake[0] % width === width -1 && direction === 1) || //if snake hits right wall
+      			(snake[0] % width === 0 && direction === -1) || //if snake hits left wall
+      			(snake[0] - width < 0 && direction === -width) ||  //if snake hits the top
+      			box[snake[0] + direction].classList.contains('snake') //if snake goes into itself
+    		) {
+      		return clearInterval(interval) //this will clear the interval if any of the above happen
+    	}
 
 		let tail = snake.pop()
 		box[tail].classList.remove('snake')
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			snake.push(tail)
 			box[tail].classList.add('snake')
 			randomApple()
-      score++
-      scoreDisplay.textContent = score
+      		score++
+      		scoreDisplay.textContent = score
 		}
 
 	}
