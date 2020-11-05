@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function start() {
 		snake.forEach(index => box[index].classList.remove('snake'))
-    		score = 0
-    		scoreDisplay.innerText = score
+		score = 0
+		scoreDisplay.innerText = score
 		box[appleIndex].classList.remove('apple')
 		clearInterval(interval)
 		direction = 1
